@@ -3,8 +3,6 @@
 export const prerender = true;
 
 export function load({ data }) {
-    console.log('Page load function called');
-    console.log('Page data:', data);
     return {
         ...data
     };

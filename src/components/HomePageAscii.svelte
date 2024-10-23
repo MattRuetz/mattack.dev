@@ -62,7 +62,7 @@
         const interval = setInterval(() => {
             updateColors();
             triggerGlitch();
-        }, 100); // Adjust speed here
+        }, 60); // Adjust speed here
         return () => clearInterval(interval);
     });
 </script>
