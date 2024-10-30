@@ -1,5 +1,7 @@
 <!-- Start of Selection -->
 <script lang="ts">
+	import '@fortawesome/fontawesome-free/css/all.min.css';
+
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 	import '../app.css';
@@ -34,6 +36,9 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
 	main {
@@ -42,7 +47,6 @@
 		flex-direction: column;
 		width: 100%;
 		box-sizing: border-box;
-		max-width: 1200px;
 		margin: 0 auto;
 	}
 </style>

@@ -73,8 +73,14 @@
     pre {
         font-family: monospace;
         white-space: pre;
-        font-size: 10px; /* Adjust as needed */
+        font-size: 10px;
         line-height: 1;
         text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        pre {
+            font-size: 6px; /* Smaller font size for smaller screens */
+        }
     }
 </style>
