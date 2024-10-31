@@ -72,11 +72,12 @@ a {
 }
 
 a:hover {
-    color: var(--sapphire);
+    color: var(--green);
 }
 
-p {
+p, li {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Form elements */
@@ -111,4 +112,208 @@ button:hover {
 ::selection {
     background-color: var(--mauve);
     color: var(--base);
+}
+
+header nav a {
+    font-size: 1rem;
+    background-color: var(--mantle);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: var(--crust);
+}
+
+/* Markdown */
+.blog-article h1 {
+    color: var(--flamingo);
+    font-size: 3em;
+}
+
+.markdown-content h2 {
+    color: var(--lavender);
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+.markdown-content h3 {
+    color: var(--sky);
+    font-size: 1.6em;
+    margin-top: 1.5em;
+}
+
+.markdown-content p {
+    margin: 1em 0;
+    line-height: 1.8;
+}
+
+.markdown-content a {
+    color: var(--sky);
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    color: var(--pink);
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+.markdown-content li {
+    margin: 0.5em 0;
+}
+
+.markdown-content pre {
+    background: var(--mantle);
+    padding: 1.5em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+    margin: 1.5em 0;
+}
+
+.markdown-content code {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+}
+
+.markdown-content p code {
+    background: var(--mantle);
+}
+
+/* Override Prism Tomorrow Night theme colors to match your theme */
+.markdown-content .token.comment,
+.markdown-content .token.prolog,
+.markdown-content .token.doctype,
+.markdown-content .token.cdata {
+    color: var(--overlay0);
+}
+
+.markdown-content .token.function {
+    color: var(--blue);
+}
+
+.markdown-content .token.keyword {
+    color: var(--mauve);
+}
+
+.markdown-content .token.string {
+    color: var(--green);
+}
+
+.markdown-content .token.number {
+    color: var(--peach);
+}
+
+/* Add after your existing markdown styles */
+.markdown-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.markdown-content pre {
+    position: relative;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    background: var(--mantle);
+    border-radius: 0.5em;
+    overflow-x: auto;
+}
+
+.markdown-content .language-typescript,
+.markdown-content .language-javascript,
+.markdown-content .language-css,
+.markdown-content .language-json,
+.markdown-content .language-bash,
+.markdown-content .language-python,
+.markdown-content .language-rust,
+.markdown-content .language-go,
+.markdown-content .language-markdown,
+.markdown-content .language-yaml,
+.markdown-content .language-toml {
+    color: var(--text);
+    text-shadow: none;
+}
+
+/* Base styles for code blocks */
+pre[class*="language-"] {
+    background: var(--mantle);
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+
+code[class*="language-"] {
+    color: var(--text);
+    font-family: "Space Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+}
+
+/* Token colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--overlay0);
+}
+
+.token.punctuation {
+    color: var(--subtext0);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: var(--peach);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--green);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: var(--teal);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: var(--mauve);
+}
+
+.token.function,
+.token.class-name {
+    color: var(--blue);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: var(--peach);
 }

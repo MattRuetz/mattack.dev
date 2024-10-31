@@ -3,9 +3,11 @@
 </script>
 
 <section class="blog-preview my-12">
-    <h2 class="text-2xl md:text-3xl font-bold text-[var(--flamingo)]">
-        {article.title}
-    </h2>
+    <a href={article.path} class="no-underline">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--flamingo)]">
+            {article.title}
+        </h2>
+    </a>
     <p class="text-[var(--subtext0)]">{article.preview}</p>
 	<a href={article.path} class="text-[var(--flamingo)] hover:text-[var(--pink)]">Read more →</a>
 </section>

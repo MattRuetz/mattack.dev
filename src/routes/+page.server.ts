@@ -1,4 +1,5 @@
 import { GITHUB_TOKEN } from '$env/static/private';
+import { slugify } from '$lib/utils/slugify';
 
 // Add at the top of the file
 export const config = {
@@ -6,7 +7,6 @@ export const config = {
         expiration: 60 // seconds
     }
 };
-
 
 async function fetchLatestFromFolder(folderPath: string) {
     const headers = {
@@ -79,14 +79,14 @@ async function fetchLatestFromFolder(folderPath: string) {
         return {
             title,
             preview,
-            path: `/${folderPath.split('/')[0].toLowerCase()}/${latestFile.path.replace('.md', '').replace(`${folderPath}/`, '')}`
+            path: `${folderPath === 'Blog Articles' ? '/blog' : folderPath === 'WIP' ? '/wip' : '/projects'}/${slugify(title)}`
         };
     } catch (error) {
         console.error(`Error loading from ${folderPath}:`, error);
         return {
             title: `Latest from ${folderPath}`,
             preview: 'Content temporarily unavailable',
-            path: `/${folderPath.split('/')[0].toLowerCase()}`
+            path: `${folderPath === 'Blog Articles' ? '/blog' : folderPath === 'WIP' ? '/wip' : '/projects'}`
         };
     }
 }

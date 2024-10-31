@@ -1,21 +1,15 @@
 <!-- Start of Selection -->
 <script lang="ts">
 	import '@fortawesome/fontawesome-free/css/all.min.css';
-
-	import Header from '../components/Header.svelte';
-	import Footer from '../components/Footer.svelte';
+	
+	import Header from '../lib/components/Header.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 	import '../app.css';
 
-	let props = $props();
-	console.log('Layout props:', props);
-
-	let { data, children } = props;
-
-	console.log('Layout data:', data);
-
+	let { data, children } = $props();
 	let showHeader = $state(data.showHeader ?? true);
 	let showFooter = $state(data.showFooter ?? true);
-	console.log('Derived showHeader:', showHeader);
+
 </script>
 
 <div class="app">
@@ -26,6 +20,7 @@
 	<main>
 		{@render children()}
 	</main>
+
 	{#if showFooter}
 		<Footer />
 	{/if}
@@ -36,7 +31,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		width: 90%;
+		width: 95%;
 		max-width: 1200px;
 		margin: 0 auto;
 	}

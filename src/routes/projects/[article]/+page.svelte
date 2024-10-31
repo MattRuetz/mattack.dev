@@ -3,4 +3,4 @@
     let { data } = $props();
 </script>
 
-<ArticleLayout {data} type="blog" />
+<ArticleLayout {data} type="project" />
